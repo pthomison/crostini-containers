@@ -1,0 +1,1 @@
+lxc exec penguin -- bash -c "curl https://raw.githubusercontent.com/pthomison/test-provisioning/master/debian-init.sh | bash"
