@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -xe
+
 # getting latest
 apt-get update && apt-get upgrade -y
 
@@ -26,9 +28,9 @@ apt-get install -y docker-ce docker-ce-cli containerd.io
 apt-get install -y nmap
 
 echo "deb https://storage.googleapis.com/cros-packages stretch main" > /etc/apt/sources.list.d/cros.list
-# if [ -f /dev/.cros_milestone ]; then sudo sed -i "s?packages?packages/$(cat /dev/.cros_milestone)?" /etc/apt/sources.list.d/cros.list; fi
+if [ -f /dev/.cros_milestone ]; then sudo sed -i "s?packages?packages/$(cat /dev/.cros_milestone)?" /etc/apt/sources.list.d/cros.list; fi
 apt install -y gnupg2 psmisc
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1397BC53640DB551
+apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
 apt update
 apt install -y binutils
 apt download cros-ui-config
