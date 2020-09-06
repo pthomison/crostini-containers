@@ -103,5 +103,6 @@ poweroff
 
 EOF
 
+lxc file push /tmp/init.sh penguin/tmp/init.sh
 
-cat /tmp/init.sh | xargs lxc exec penguin -- 
+lxc exec penguin -- bash -c "bash /tmp/init.sh"
