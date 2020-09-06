@@ -105,4 +105,4 @@ EOF
 
 lxc file push /tmp/init.sh penguin/tmp/init.sh
 
-lxc exec penguin -- bash -c "bash /tmp/init.sh"
+lxc exec penguin -- bash -c "sleep 2 && bash /tmp/init.sh"
