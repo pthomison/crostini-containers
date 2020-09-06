@@ -103,6 +103,10 @@ poweroff
 
 EOF
 
+sleep 2
+
 lxc file push /tmp/init.sh penguin/tmp/init.sh
 
-lxc exec penguin -- bash -c "sleep 2 && bash /tmp/init.sh"
+sleep 2
+
+lxc exec penguin -- bash -c "bash /tmp/init.sh"
