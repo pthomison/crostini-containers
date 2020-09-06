@@ -104,4 +104,4 @@ poweroff
 EOF
 
 
-lxc exec penguin -- bash -c "sleep 5 && bash /tmp/init.sh"
+cat /tmp/init.sh | xargs lxc exec penguin -- 
