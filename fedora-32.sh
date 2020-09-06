@@ -10,6 +10,7 @@ lxc launch $LXC_IMAGE $VM_NAME < /dev/null
 
 cat << 'EOF' > /tmp/init.sh
 #!/usr/bin/env bash
+set -xe
 
 USERNAME="pthomison"
 
