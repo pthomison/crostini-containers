@@ -102,7 +102,7 @@ su $USERNAME -c "systemctl --user enable --now cros-garcon"
 # systemctl --user enable --now cros-pulse-config
 
 
-su $USERNAME -c 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'
+su $USERNAME -c 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 
 chsh $USERNAME -s $(which zsh)
 
