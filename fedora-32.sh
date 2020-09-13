@@ -86,11 +86,19 @@ ln -s /mnt/chromeos/MyFiles/Configs/aws/credentials /home/pthomison/.aws/credent
 
 sudo su - $USERNAME
 
-systemctl --user enable --now sommelier@0 #sommelier-x@0 sommelier@1 sommelier-x@1 cros-garcon cros-pulse-config
+whoami
+
+journalctl -e --no-pager
+
+systemctl --failed --no-pager --all
+
+systemctl --user enable --now sommelier@0 
 systemctl --user enable --now sommelier-x@0
 systemctl --user enable --now sommelier@1
 systemctl --user enable --now sommelier-x@1
 systemctl --user enable --now cros-garcon
+
+#sommelier-x@0 sommelier@1 sommelier-x@1 cros-garcon cros-pulse-config
 # systemctl --user enable --now cros-pulse-config
 
 
