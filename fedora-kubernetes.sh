@@ -2,7 +2,7 @@
 set -xe
 VM_NAME=penguin
 
-cat << 'EOD' > /tmp/kubernetes.sh
+cat << 'EOD' > /tmp/k8s.sh
 #!/usr/bin/env bash
 set -xe
 USERNAME="pthomison"
