@@ -84,23 +84,11 @@ ln -s /mnt/chromeos/MyFiles/Configs/ssh/config /home/pthomison/.ssh/config
 ln -s /mnt/chromeos/MyFiles/Configs/aws/config /home/pthomison/.aws/config
 ln -s /mnt/chromeos/MyFiles/Configs/aws/credentials /home/pthomison/.aws/credentials
 
-# sudo su - $USERNAME
-
-# whoami
-
-# journalctl -e --no-pager
-
-# systemctl --failed --no-pager --all
-
 su $USERNAME -c "systemctl --user enable --now sommelier@0"
 su $USERNAME -c "systemctl --user enable --now sommelier-x@0"
 su $USERNAME -c "systemctl --user enable --now sommelier@1"
 su $USERNAME -c "systemctl --user enable --now sommelier-x@1"
 su $USERNAME -c "systemctl --user enable --now cros-garcon"
-
-#sommelier-x@0 sommelier@1 sommelier-x@1 cros-garcon cros-pulse-config
-# systemctl --user enable --now cros-pulse-config
-
 
 su $USERNAME -c 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 
